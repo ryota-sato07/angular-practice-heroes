@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "angular-practice-heroes"
+  "cli": {
+    "analytics": false
+  }
 }

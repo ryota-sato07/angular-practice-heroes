@@ -14,6 +14,8 @@ import { HttpClientModule }    from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }            from './in-memory-data.service';
 
+import { NgxsModule } from '@ngxs/store';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -23,6 +25,9 @@ import { InMemoryDataService }            from './in-memory-data.service';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
+    NgxsModule.forRoot([
+      
+    ]),
   ],
   declarations: [
     AppComponent,
