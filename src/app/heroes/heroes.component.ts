@@ -1,38 +1,42 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable }        from 'rxjs';
 
-import { Hero }              from '../hero';
-import { HeroService }       from '../hero.service';
+import { Store, Select } from '@ngxs/store';
+import { HeroAction }    from '../hero.actions';
+import { HeroState }     from '../hero.state';
+
+import { Hero } from '../hero';
 
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.sass']
+  styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[] = [];
+  /** ngxs Selector **/
+  @Select(HeroState.heroes) heroes$!: Observable<Hero[]>
 
-  constructor(private heroService: HeroService) { }
+  constructor(
+    private store: Store
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.getHeroes();
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
+    this.store.dispatch(new HeroAction.Load())
   }
 
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.heroService.addHero({ name } as Hero)
-      .subscribe(hero => {
-        this.heroes.push(hero);
-      });
+
+    this.store.dispatch(new HeroAction.Add({ name } as Hero))
   }
 
   delete(hero: Hero): void {
-    this.heroes = this.heroes.filter(h => h !== hero);
-    this.heroService.deleteHero(hero.id).subscribe();
+    this.store.dispatch(new HeroAction.Delete(hero))
   }
+
 }

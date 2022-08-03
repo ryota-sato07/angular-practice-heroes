@@ -1,23 +1,7 @@
-<!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <h1>{{title}}</h1>
-  <nav>
-    <a routerLink="/heroes">Heroes</a>
-    <br>
-    <a routerLink="/dashboard">Dashboard</a>
-   </nav>
-  <router-outlet></router-outlet>
-  <app-messages></app-messages>
-
-  <h2>SubTitleを変更</h2>
-  <p>Here are some links to help you get started:</p>
-</div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<h1>{{title}}</h1>
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
+<app-messages></app-messages>

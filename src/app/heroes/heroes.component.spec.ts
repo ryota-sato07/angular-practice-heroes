@@ -4,7 +4,7 @@ import { HeroesComponent } from './heroes.component';
 
 describe('HeroesComponent', () => {
   let component: HeroesComponent;
-  let fixture: ComponentFixture<HeroesComponent>;
+  let fixture:   ComponentFixture<HeroesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -14,7 +14,7 @@ describe('HeroesComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HeroesComponent);
+    fixture   = TestBed.createComponent(HeroesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

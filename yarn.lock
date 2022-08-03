@@ -1324,17 +1324,17 @@
   resolved "https://registry.npmjs.org/@ngtools/webpack/-/webpack-14.1.0.tgz"
   integrity sha512-d4U6ymDCXckVgfjYEv1Wjzd78ZSm0NKgq8mN6FdlrCupg02LPIODjeKyNr4c4zwMAOJeHkVNEZ+USoDEK3XSsw==
 
-"@ngxs/logger-plugin@^3.7.4-dev.master-224556c":
-  version "3.7.4-dev.master-224556c"
-  resolved "https://registry.yarnpkg.com/@ngxs/logger-plugin/-/logger-plugin-3.7.4-dev.master-224556c.tgz#4e921132e5e445ad8de78aa438941acb0b8ddb1b"
-  integrity sha512-uheaT69iHp+UefsmSqrLNEyW5uixdoZfQHgZGo+L+h5UpoTAHv9T3HaBHXXmD7uElvCO4/LE6jN7yFWKwbKVfw==
+"@ngxs/logger-plugin@^3.7.4":
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/@ngxs/logger-plugin/-/logger-plugin-3.7.4.tgz#46a47f6d199db069984580ecac8e43f97b9ec97f"
+  integrity sha512-KcFSLhp1GN2yvK3Gj6r2U3uTvMXrI4/2/ZhxptFl7QCBzqUSn6M0IAxHs4NcdJaqEZgjLfuCoVjGDc3QPi7Ljg==
   dependencies:
     tslib "^1.9.0"
 
-"@ngxs/store@^3.7.4-dev.master-224556c":
-  version "3.7.4-dev.master-224556c"
-  resolved "https://registry.yarnpkg.com/@ngxs/store/-/store-3.7.4-dev.master-224556c.tgz#e2f19c8b3a4b7a9fa9c2573d71e547761045eaeb"
-  integrity sha512-0ga63/j8tTy1tcg8QG+6ePgntiM79xb+W2GAo60Fhxbv6jb0RVX+FZX1jiGTTCsKiTE9njV1BqYF/kcYsQ8n7g==
+"@ngxs/store@^3.7.4":
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/@ngxs/store/-/store-3.7.4.tgz#dae9e6c101a7688970558fb140ac5ef55706a200"
+  integrity sha512-/W+sSz4jOkS0ZlxozdQj2+fPhl2rv6Yhbuj3WDqRw++jJ+ZU29blOpfd5lgjc24EH/Dbi0ACZl5IyX1CUbJlNQ==
   dependencies:
     tslib "^1.9.0"
 

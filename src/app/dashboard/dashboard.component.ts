@@ -1,23 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-import { Hero }              from '../hero';
-import { HeroService }       from '../hero.service';
+import { Observable }        from 'rxjs';
+
+import { Store, Select } from '@ngxs/store';
+import { HeroAction }    from '../hero.actions';
+import { HeroState }     from '../hero.state';
+
+import { Hero } from '../hero';
 
 @Component({
-  selector: 'app-dashboard',
+  selector:    'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.sass' ]
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  /** ngxs Selector **/
+  @Select(HeroState.heroes) heroes$!: Observable<Hero[]>
+
+  constructor(
+    private store: Store
+  ) { }
 
   ngOnInit(): void {
     this.getHeroes();
   }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+    this.store.dispatch(new HeroAction.Load())
   }
 }
